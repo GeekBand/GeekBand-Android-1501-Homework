@@ -2,6 +2,7 @@ package com.geekband.luminous.homework.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Adapter;
@@ -14,11 +15,14 @@ import java.util.LinkedList;
  * Created by hisashieki on 15/8/14.
  */
 public class MyListViewX extends AdapterView {
-
+    public static final String TAG = "MyListViewX";
     int mTouchStartY;
     int mListTopStart;
     /** The top of this ListView */
     int mListTop;
+    /** The offset from the top of the currently first visible item to the top of the first item */
+    int mListTopOffset;
+
     /** adapter positions of the first currently visible views */
     int mFirstItemPosition;
     /** adapter positions of the last currently visible views */
@@ -27,7 +31,8 @@ public class MyListViewX extends AdapterView {
     /** The adapter with all the data */
     private Adapter mAdapter;
     /** the cache of Views */
-    private LinkedList<View> recycledView = new LinkedList<>();
+    private LinkedList<View> cacheViews = new LinkedList<>();
+
     public MyListViewX(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
@@ -60,36 +65,37 @@ public class MyListViewX extends AdapterView {
         }
         if (getChildCount() == 0) {
             mLastItemPosition = -1;
-            fillListDown(mListTop);
+            fillListDown(0, 0);
         } else {
-            //int offset = mListTop + mListTopOffset - getChildTop(getChildAt(0));
-            //removeNonVisibleViews(offset);
-            //fillList(offset);
+            int offset = mListTop;
+            removeNonVisibleViews(offset);
+            fillList(offset);
         }
 
         positionItems();
     }
 
-    private void fillListDown(int offset) {
-        int bottomEdge = offset;
-        while (bottomEdge < getHeight() && mLastItemPosition+1 < mAdapter.getCount()) {
-            View newBottomChild = mAdapter.getView(mLastItemPosition+1, null, this);
+    private void fillListDown(int bottomEdge, int offset) {
+        Log.e(TAG, "fillListDown times+1");
+        while (bottomEdge < getHeight() && mLastItemPosition + 1 < mAdapter.getCount()) {
+            View newBottomChild = mAdapter.getView(mLastItemPosition + 1, null, this);
             addAndMeasureChild(newBottomChild);
             bottomEdge += newBottomChild.getMeasuredHeight();
             mLastItemPosition++;
+            Log.d(TAG, "fillListDown " + mLastItemPosition + "bottomEdge: " + bottomEdge);
         }
     }
 
-    private void fillListUp(int offset) {
+    private void fillListUp(int topEdge, int offset) {
 
     }
 
     private void fillList(int offset) {
+        final int bottomEdge = getChildAt(getChildCount() - 1).getBottom();
+        fillListDown(bottomEdge, offset);
 
-    }
-
-    private void removeNonVisibleViews(int offset) {
-
+        final int topEdge = getChildAt(0).getTop();
+        fillListUp(topEdge, offset);
     }
 
     private void addAndMeasureChild(View child) {
@@ -99,12 +105,27 @@ public class MyListViewX extends AdapterView {
         }
         addViewInLayout(child, -1, params, true);
         int itemWidth = getWidth();
-        System.out.println(itemWidth);
-        child.measure(MeasureSpec.EXACTLY | itemWidth, MeasureSpec.UNSPECIFIED);
+        child.measure(MeasureSpec.EXACTLY | itemWidth, MeasureSpec.EXACTLY | 800);
     }
 
+    /**
+     * @param offset Offset of the visible area
+     */
+    private void removeNonVisibleViews(int offset) {
+        int childCount = getChildCount();
+        if (mLastItemPosition != mAdapter.getCount() - 1 && childCount > 1) {
+            View firstChild = getChildAt(0);
+            if (firstChild.getBottom() < 0) {
+                removeViewInLayout(firstChild);
+                cacheViews.addLast(firstChild);
+            }
+        }
+
+    }
+
+
     private void positionItems() {
-        int top = 0 + mListTop;
+        int top = +mListTopOffset + mListTop;
         for (int i = 0; i < getChildCount(); i++) {
             View child = getChildAt(i);
             int width = child.getMeasuredWidth();

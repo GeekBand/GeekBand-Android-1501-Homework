@@ -4,18 +4,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.geekband.luminous.homework.HorizontalListActivity">
-
-
-    <ScrollView
+    <com.geekband.luminous.homework.widget.MyHorizontalListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="100dp"
+        android:id="@+id/lv_main"/>
 
-        <com.geekband.luminous.homework.widget.MyGridView
-            android:id="@+id/gv_2"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:background="@color/material_deep_teal_200"
-            android:columnWidth="100dp"
-            android:numColumns="4" />
-    </ScrollView>
 </LinearLayout>

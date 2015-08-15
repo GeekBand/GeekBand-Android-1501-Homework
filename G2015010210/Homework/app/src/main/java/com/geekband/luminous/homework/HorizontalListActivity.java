@@ -9,14 +9,14 @@ import android.widget.ListView;
 
 import com.geekband.luminous.homework.adapter.MyGridAdapter;
 import com.geekband.luminous.homework.model.MyData;
+import com.geekband.luminous.homework.widget.MyHorizontalListView;
 
 public class HorizontalListActivity extends BaseActivity {
-    GridView gvMain,gv2;
-    ListView lv1;
+    MyHorizontalListView lvMain;
     @Override
     public void initView() {
-        gv2 = (GridView) findViewById(R.id.gv_2);
-        gv2.setAdapter(new MyGridAdapter(context, MyData.picIds));
+        lvMain = (MyHorizontalListView) findViewById(R.id.lv_main);
+        lvMain.setAdapter(new MyGridAdapter(context, MyData.picIds));
     }
 
     @Override
