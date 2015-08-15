@@ -11,10 +11,12 @@ import android.os.PersistableBundle;
  */
 public abstract class BaseActivity extends Activity {
     protected Context context;
+    protected static String TAG;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context=this;
+        TAG = this.getClass().getName();
         if(getMainContentViewId()!=0){
             setContentView(getMainContentViewId());
         }

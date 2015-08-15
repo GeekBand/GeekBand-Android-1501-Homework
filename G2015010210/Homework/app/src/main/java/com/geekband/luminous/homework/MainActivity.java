@@ -23,6 +23,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     }
     public void initList(){
         homeWorks.add("Horizontal ListView");
+        homeWorks.add("MyListView");
 
     }
     @Override
@@ -32,9 +33,14 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Intent intent = new Intent();
         switch (position){
             case 0:
-                Intent intent = new Intent(context,HorizontalListActivity.class);
+                intent.setClass(context,HorizontalListActivity.class);
+                startActivity(intent);
+                break;
+            case 1:
+                intent.setClass(context,MyListViewActivity.class);
                 startActivity(intent);
                 break;
             default:

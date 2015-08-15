@@ -15,12 +15,8 @@ public class HorizontalListActivity extends BaseActivity {
     ListView lv1;
     @Override
     public void initView() {
-        gvMain = (GridView) findViewById(R.id.gv_main);
-        gvMain.setAdapter(new MyGridAdapter(context, MyData.picIds));
         gv2 = (GridView) findViewById(R.id.gv_2);
         gv2.setAdapter(new MyGridAdapter(context, MyData.picIds));
-        lv1 = (ListView) findViewById(R.id.lv1);
-        lv1.setAdapter(new MyGridAdapter(context,MyData.picIds));
     }
 
     @Override
