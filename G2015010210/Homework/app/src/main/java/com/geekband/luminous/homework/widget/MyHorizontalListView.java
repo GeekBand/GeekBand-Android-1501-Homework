@@ -23,7 +23,8 @@ public class MyHorizontalListView extends AdapterView {
     /** 测量时的List的右边缘,超出屏幕则不再添加View */
     int rightEdge;
     /** 最后一个加入的View的position */
-    int myLastAddPosition=-1;
+    int myLastAddPosition = -1;
+
     public MyHorizontalListView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.setClickable(true);
@@ -61,8 +62,9 @@ public class MyHorizontalListView extends AdapterView {
         if (mAdapter == null || mAdapter.getCount() <= 0) {
             return;
         }
-        while (rightEdge < getWidth() && myLastAddPosition+1 < mAdapter.getCount()) {
-            View v = mAdapter.getView(myLastAddPosition+1, null, this);
+        //add in 
+        while (rightEdge < getWidth() && myLastAddPosition + 1 < mAdapter.getCount()) {
+            View v = mAdapter.getView(myLastAddPosition + 1, null, this);
             v.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.EXACTLY | getHeight());
             rightEdge += v.getMeasuredWidth();
             LayoutParams myLayoutParams = v.getLayoutParams();
@@ -72,12 +74,13 @@ public class MyHorizontalListView extends AdapterView {
             addViewInLayout(v, -1, myLayoutParams);
             myLastAddPosition++;
         }
+        //Layout
         int mLeft = 0;
         Log.e(TAG, "onLayout last added position:" + myLastAddPosition);
         for (int i = 0; i < getChildCount(); i++) {
             View childView = getChildAt(i);
             int cRight = childView.getMeasuredWidth();
-            childView.layout(mLeft+mListLeft, 0, mLeft + cRight+mListLeft, getHeight());
+            childView.layout(mLeft + mListLeft, 0, mLeft + cRight + mListLeft, getHeight());
             mLeft += cRight;
             Log.e(TAG, "onLayout mLeft" + mLeft);
         }
@@ -90,8 +93,8 @@ public class MyHorizontalListView extends AdapterView {
                 mTouchDownX = (int) event.getX();
                 break;
             case MotionEvent.ACTION_MOVE:
-                mListLeft += (int)(event.getX() - mTouchDownX);
-                rightEdge += (int)(event.getX() - mTouchDownX);
+                mListLeft += (int) (event.getX() - mTouchDownX);
+                rightEdge += (int) (event.getX() - mTouchDownX);
                 mTouchDownX = (int) event.getX();
                 requestLayout();
                 break;
