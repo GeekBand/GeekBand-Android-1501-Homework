@@ -36,6 +36,8 @@ import android.view.ViewConfiguration;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 
+import com.geekband.luminous.homework.Activity.MyListViewActivity;
+
 import java.util.LinkedList;
 
 /**
@@ -502,4 +504,6 @@ public class MyListView extends AdapterView<Adapter> {
         }
         return null;
     }
+
+
 }

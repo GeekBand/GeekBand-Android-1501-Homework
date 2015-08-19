@@ -62,7 +62,7 @@ public class MyHorizontalListView extends AdapterView {
         if (mAdapter == null || mAdapter.getCount() <= 0) {
             return;
         }
-        //add in 
+        //add in
         while (rightEdge < getWidth() && myLastAddPosition + 1 < mAdapter.getCount()) {
             View v = mAdapter.getView(myLastAddPosition + 1, null, this);
             v.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.EXACTLY | getHeight());
@@ -95,6 +95,10 @@ public class MyHorizontalListView extends AdapterView {
             case MotionEvent.ACTION_MOVE:
                 mListLeft += (int) (event.getX() - mTouchDownX);
                 rightEdge += (int) (event.getX() - mTouchDownX);
+                if(mListLeft>0){
+                    rightEdge-=mListLeft;
+                    mListLeft=0;
+                }
                 mTouchDownX = (int) event.getX();
                 requestLayout();
                 break;

@@ -105,7 +105,7 @@ public class MyListViewX extends AdapterView {
         }
         addViewInLayout(child, -1, params, true);
         int itemWidth = getWidth();
-        child.measure(MeasureSpec.EXACTLY | itemWidth, MeasureSpec.EXACTLY | 800);
+        child.measure(MeasureSpec.EXACTLY | itemWidth, MeasureSpec.EXACTLY | itemWidth);
     }
 
     /**

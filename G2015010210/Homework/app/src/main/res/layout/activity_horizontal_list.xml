@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.geekband.luminous.homework.HorizontalListActivity">
+    tools:context="com.geekband.luminous.homework.Activity.HorizontalListActivity">
     <com.geekband.luminous.homework.widget.MyHorizontalListView
         android:layout_width="match_parent"
         android:layout_height="100dp"
