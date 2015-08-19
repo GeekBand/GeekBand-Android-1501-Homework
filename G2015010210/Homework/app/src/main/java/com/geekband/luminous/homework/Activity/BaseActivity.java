@@ -1,4 +1,4 @@
-package com.geekband.luminous.homework;
+package com.geekband.luminous.homework.Activity;
 
 import android.app.Activity;
 import android.content.Context;

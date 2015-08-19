@@ -1,7 +1,6 @@
-package com.geekband.luminous.homework;
+package com.geekband.luminous.homework.Activity;
 
-import android.widget.ListView;
-
+import com.geekband.luminous.homework.R;
 import com.geekband.luminous.homework.adapter.MyGridAdapter;
 import com.geekband.luminous.homework.model.MyData;
 import com.geekband.luminous.homework.widget.MyListViewX;
