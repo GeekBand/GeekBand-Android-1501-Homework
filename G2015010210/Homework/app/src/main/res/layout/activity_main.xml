@@ -1,21 +1,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/material_blue_grey_800"
+        android:gravity="center"
         android:padding="16dp"
         android:text="@string/title_main"
-        android:background="@color/material_blue_grey_800"
-        android:textColor="@color/button_material_light"
-        android:gravity="center"/>
+        android:textColor="@color/button_material_light"/>
+
     <ListView
-        android:layout_below="@+id/tv_title"
+        android:id="@+id/lv_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lv_main"/>
+        android:layout_below="@+id/tv_title"/>
 </RelativeLayout>

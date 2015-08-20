@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import com.geekband.luminous.homework.R;
 
@@ -52,19 +51,19 @@ public class MyGridAdapter extends BaseAdapter {
         ImageView ivPic = (ImageView) v.findViewById(R.id.iv_picture);
         ivPic.setLayoutParams(new android.widget.AbsListView.LayoutParams(mWidth / 4, mWidth / 4));
         ivPic.setImageResource(picIds.get(position));
-//        v.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.e(TAG, "item onClick " + position);
-//            }
-//        });
-//        v.setOnLongClickListener(new View.OnLongClickListener() {
-//            @Override
-//            public boolean onLongClick(View v) {
-//                Log.e(TAG, "item onLongClick " + position);
-//                return true;
-//            }
-//        });
+        v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.e(TAG, "item onClick " + position);
+            }
+        });
+        v.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Log.e(TAG, "item onLongClick " + position);
+                return true;
+            }
+        });
         return v;
     }
 }

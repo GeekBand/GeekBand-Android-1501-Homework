@@ -10,6 +10,7 @@ import java.util.List;
  */
 public class MyData {
     public static List<Integer> picIds = new ArrayList<>();
+
     static {
         picIds.add(R.drawable.p1);
         picIds.add(R.drawable.p2);

@@ -36,8 +36,6 @@ import android.view.ViewConfiguration;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 
-import com.geekband.luminous.homework.Activity.MyListViewActivity;
-
 import java.util.LinkedList;
 
 /**
@@ -65,42 +63,31 @@ public class MyListView extends AdapterView<Adapter> {
 
     /** User is scrolling the list */
     private static final int TOUCH_STATE_SCROLL = 2;
-
+    /** A list of cached (re-usable) item views */
+    private final LinkedList<View> mCachedItemViews = new LinkedList<View>();
     /** The adapter with all the data */
     private Adapter mAdapter;
-
     /** Current touch state */
     private int mTouchState = TOUCH_STATE_RESTING;
-
     /** X-coordinate of the down event */
     private int mTouchStartX;
-
     /** Y-coordinate of the down event */
     private int mTouchStartY;
-
     /**
      * The top of the first item when the touch down event was received
      */
     private int mListTopStart;
-
     /** The current top of the first item */
     private int mListTop;
-
     /**
      * The offset from the top of the currently first visible item to the top of
      * the first item
      */
     private int mListTopOffset;
-
     /** The adaptor position of the first visible item */
     private int mFirstItemPosition;
-
     /** The adaptor position of the last visible item */
     private int mLastItemPosition;
-
-    /** A list of cached (re-usable) item views */
-    private final LinkedList<View> mCachedItemViews = new LinkedList<View>();
-
     /** Used to check for long press actions */
     private Runnable mLongPressRunnable;
 
@@ -109,12 +96,17 @@ public class MyListView extends AdapterView<Adapter> {
 
     /**
      * Constructor
-     * 
+     *
      * @param context The context
-     * @param attrs Attributes
+     * @param attrs   Attributes
      */
     public MyListView(final Context context, final AttributeSet attrs) {
         super(context, attrs);
+    }
+
+    @Override
+    public Adapter getAdapter() {
+        return mAdapter;
     }
 
     @Override
@@ -122,11 +114,6 @@ public class MyListView extends AdapterView<Adapter> {
         mAdapter = adapter;
         removeAllViewsInLayout();
         requestLayout();
-    }
-
-    @Override
-    public Adapter getAdapter() {
-        return mAdapter;
     }
 
     @Override
@@ -170,13 +157,13 @@ public class MyListView extends AdapterView<Adapter> {
                     startScrollIfNeeded(event);
                 }
                 if (mTouchState == TOUCH_STATE_SCROLL) {
-                    scrollList((int)event.getY() - mTouchStartY);
+                    scrollList((int) event.getY() - mTouchStartY);
                 }
                 break;
 
             case MotionEvent.ACTION_UP:
                 if (mTouchState == TOUCH_STATE_CLICK) {
-                    clickChildAt((int)event.getX(), (int)event.getY());
+                    clickChildAt((int) event.getX(), (int) event.getY());
                 }
                 endTouch();
                 break;
@@ -190,7 +177,7 @@ public class MyListView extends AdapterView<Adapter> {
 
     @Override
     protected void onLayout(final boolean changed, final int left, final int top, final int right,
-            final int bottom) {
+                            final int bottom) {
         super.onLayout(changed, left, top, right, bottom);
 
         // if we don't have an adapter, we don't need to do anything
@@ -214,13 +201,13 @@ public class MyListView extends AdapterView<Adapter> {
     /**
      * Sets and initializes all things that need to when we start a touch
      * gesture.
-     * 
+     *
      * @param event The down event
      */
     private void startTouch(final MotionEvent event) {
         // save the start place
-        mTouchStartX = (int)event.getX();
-        mTouchStartY = (int)event.getY();
+        mTouchStartX = (int) event.getX();
+        mTouchStartY = (int) event.getY();
         mListTopStart = getChildAt(0).getTop() - mListTopOffset;
 
         // start checking for a long press
@@ -245,7 +232,7 @@ public class MyListView extends AdapterView<Adapter> {
     /**
      * Scrolls the list. Takes care of updating rotation (if enabled) and
      * snapping
-     * 
+     *
      * @param scrolledDistance The distance to scroll
      */
     private void scrollList(final int scrolledDistance) {
@@ -279,13 +266,13 @@ public class MyListView extends AdapterView<Adapter> {
     /**
      * Checks if the user has moved far enough for this to be a scroll and if
      * so, sets the list in scroll mode
-     * 
+     *
      * @param event The (move) event
      * @return true if scroll was started, false otherwise
      */
     private boolean startScrollIfNeeded(final MotionEvent event) {
-        final int xPos = (int)event.getX();
-        final int yPos = (int)event.getY();
+        final int xPos = (int) event.getX();
+        final int yPos = (int) event.getY();
         if (xPos < mTouchStartX - TOUCH_SCROLL_THRESHOLD
                 || xPos > mTouchStartX + TOUCH_SCROLL_THRESHOLD
                 || yPos < mTouchStartY - TOUCH_SCROLL_THRESHOLD
@@ -300,11 +287,11 @@ public class MyListView extends AdapterView<Adapter> {
 
     /**
      * Returns the index of the child that contains the coordinates given.
-     * 
+     *
      * @param x X-coordinate
      * @param y Y-coordinate
      * @return The index of the child that contains the coordinates. If no child
-     *         is found then it returns INVALID_INDEX
+     * is found then it returns INVALID_INDEX
      */
     private int getContainingChildIndex(final int x, final int y) {
         if (mRect == null) {
@@ -322,7 +309,7 @@ public class MyListView extends AdapterView<Adapter> {
     /**
      * Calls the item click listener for the child with at the specified
      * coordinates
-     * 
+     *
      * @param x The x-coordinate
      * @param y The y-coordinate
      */
@@ -338,7 +325,7 @@ public class MyListView extends AdapterView<Adapter> {
 
     /**
      * Calls the item long click listener for the child with the specified index
-     * 
+     *
      * @param index Child index
      */
     private void longClickChild(final int index) {
@@ -354,7 +341,7 @@ public class MyListView extends AdapterView<Adapter> {
     /**
      * Removes view that are outside of the visible part of the list. Will not
      * remove all views.
-     * 
+     *
      * @param offset Offset of the visible area
      */
     private void removeNonVisibleViews(final int offset) {
@@ -411,7 +398,7 @@ public class MyListView extends AdapterView<Adapter> {
 
     /**
      * Fills the list with child-views
-     * 
+     *
      * @param offset Offset of the visible area
      */
     private void fillList(final int offset) {
@@ -424,9 +411,9 @@ public class MyListView extends AdapterView<Adapter> {
 
     /**
      * Starts at the bottom and adds children until we've passed the list bottom
-     * 
+     *
      * @param bottomEdge The bottom edge of the currently last child
-     * @param offset Offset of the visible area
+     * @param offset     Offset of the visible area
      */
     private void fillListDown(int bottomEdge, final int offset) {
         while (bottomEdge + offset < getHeight() && mLastItemPosition < mAdapter.getCount() - 1) {
@@ -439,9 +426,9 @@ public class MyListView extends AdapterView<Adapter> {
 
     /**
      * Starts at the top and adds children until we've passed the list top
-     * 
+     *
      * @param topEdge The top edge of the currently first child
-     * @param offset Offset of the visible area
+     * @param offset  Offset of the visible area
      */
     private void fillListUp(int topEdge, final int offset) {
         while (topEdge + offset > 0 && mFirstItemPosition > 0) {
@@ -458,8 +445,8 @@ public class MyListView extends AdapterView<Adapter> {
 
     /**
      * Adds a view as a child view and takes care of measuring it
-     * 
-     * @param child The view to add
+     *
+     * @param child      The view to add
      * @param layoutMode Either LAYOUT_MODE_ABOVE or LAYOUT_MODE_BELOW
      */
     private void addAndMeasureChild(final View child, final int layoutMode) {
@@ -495,7 +482,7 @@ public class MyListView extends AdapterView<Adapter> {
 
     /**
      * Checks if there is a cached view that can be used
-     * 
+     *
      * @return A cached view or, if none was found, null
      */
     private View getCachedView() {

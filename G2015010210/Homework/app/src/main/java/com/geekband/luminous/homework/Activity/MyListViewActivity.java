@@ -9,7 +9,6 @@ import com.geekband.luminous.homework.R;
 import com.geekband.luminous.homework.adapter.MyGridAdapter;
 import com.geekband.luminous.homework.model.MyData;
 import com.geekband.luminous.homework.widget.MyListView;
-import com.geekband.luminous.homework.widget.MyListViewX;
 
 /**
  * An activity to test listView
@@ -36,7 +35,7 @@ public class MyListViewActivity extends BaseActivity implements AdapterView.OnIt
 
     @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(MyListViewActivity.this, "longClick"+position, Toast.LENGTH_SHORT).show();
+        Toast.makeText(MyListViewActivity.this, "longClick" + position, Toast.LENGTH_SHORT).show();
         return true;
     }
 }
