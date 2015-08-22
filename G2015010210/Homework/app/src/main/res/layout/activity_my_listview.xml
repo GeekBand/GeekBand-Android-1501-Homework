@@ -6,8 +6,9 @@
 
     <com.geekband.luminous.homework.widget.MyListView
         android:id="@+id/lv_main"
-        android:layout_width="100dp"
-        android:layout_height="400dp"
+        android:layout_width="match_parent"
+        android:background="@color/material_deep_teal_500"
+        android:layout_height="match_parent"
         android:layout_centerVertical="true"
         android:clickable="true"/>
 </RelativeLayout>
