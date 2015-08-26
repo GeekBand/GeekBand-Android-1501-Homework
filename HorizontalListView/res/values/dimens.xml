@@ -1,0 +1,12 @@
+<resources>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <dimen name="image_gridview_width">100dp</dimen>
+    <dimen name="image_gridview_height">100dp</dimen>
+    <dimen name="image_gridview_gap">2dp</dimen>
+    
+    <dimen name="report_icon_size">80dp</dimen>
+
+</resources>
