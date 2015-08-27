@@ -6,4 +6,4 @@
     android:layout_height="100dp"
     android:background="@color/ripple_material_light"
     android:scaleType="fitXY"
- />
+    />
