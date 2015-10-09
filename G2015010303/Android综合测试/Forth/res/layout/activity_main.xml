@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.forth.MainActivity" >
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Darrly  is learning" />
+	<Button android:id="@+id/update"
+	    android:text="UPDATE THE TEXTVIEW"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="15dp"
+	    android:layout_marginTop="20dp"
+	    android:layout_marginBottom="20dp"/>
+	<EditText android:id="@+id/et"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="16dp"
+	    android:layout_marginBottom="15dp"
+	    />
+	<ListView android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/lv"></ListView>
+	
+</LinearLayout>
