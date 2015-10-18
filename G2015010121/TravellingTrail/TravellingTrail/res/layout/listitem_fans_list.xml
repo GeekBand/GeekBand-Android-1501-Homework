@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_comment_item"
+    android:padding="10dp" >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/listitem_fans_list_iv_avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_avatar_border"
+        fresco:placeholderImage="@drawable/img_default_avatar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_toRightOf="@+id/listitem_fans_list_iv_avatar"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/listitem_fans_list_tv_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:text="对方未设置昵称" />
+
+        <TextView
+            android:id="@+id/listitem_fans_list_tv_add_time"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:padding="0dp"
+            android:textColor="#ff6600"
+            android:gravity="center_vertical"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

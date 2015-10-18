@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WizardPageContainer" >
+
+    <TextView style="@style/WizardPageTitle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/frag_fill_travel_name_edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="top|start"
+            android:textSize="20sp"
+            android:inputType="textMultiLine"
+            android:saveEnabled="false"
+            android:hint="请输入旅程名称" />
+    </LinearLayout>
+
+</LinearLayout>

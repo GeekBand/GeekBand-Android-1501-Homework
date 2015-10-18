@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    >
+    <LinearLayout 
+        android:layout_height="130dp"
+        android:layout_width="match_parent"
+        android:gravity="center">
+    	<com.snail.travellingTrail.common.views.CircleImageView 
+    	    android:id="@+id/upload_image_avatar"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/ic_default_avatar"/>
+	</LinearLayout>
+	
+    <Button 
+        android:id="@+id/upload_image_bt"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:text="上传头像"/>
+</LinearLayout>

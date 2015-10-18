@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:su="http://schemas.android.com/apk/res-auto"
+    style="@style/WizardPageContainer" >
+
+    <TextView style="@style/WizardPageTitle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center_horizontal" >
+        
+        <com.snail.travellingTrail.common.views.WheelView
+            android:id="@+id/frag_choose_start_date_wv_year"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+        <com.snail.travellingTrail.common.views.WheelView
+            android:id="@+id/frag_choose_start_date_wv_month"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+        <com.snail.travellingTrail.common.views.WheelView
+            android:id="@+id/frag_choose_start_date_wv_day"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+        
+<!-- 		<com.snail.travellingTrail.slidingmenu.view.ScrollerNumberPicker
+            android:id="@+id/frag_choose_start_date_np_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@color/background_gray"
+            su:itemNumber="3"
+            su:lineColor="@color/secondary_green"
+            su:maskHight="32dp"
+            su:noEmpty="true"
+            su:normalTextColor="#999999"
+            su:normalTextSize="14sp"
+            su:selecredTextColor="@color/black"
+            su:selecredTextSize="22sp"
+            su:unitHight="50dp" />
+
+        <com.snail.travellingTrail.slidingmenu.view.ScrollerNumberPicker
+            android:id="@+id/frag_choose_start_date_np_month"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@color/background_gray"
+            su:itemNumber="3"
+            su:lineColor="@color/secondary_green"
+            su:maskHight="32dp"
+            su:noEmpty="true"
+            su:normalTextColor="#999999"
+            su:normalTextSize="14sp"
+            su:selecredTextColor="@color/black"
+            su:selecredTextSize="22sp"
+            su:unitHight="50dp" />
+
+        <com.snail.travellingTrail.slidingmenu.view.ScrollerNumberPicker
+            android:id="@+id/frag_choose_start_date_np_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@color/background_gray"
+            su:itemNumber="3"
+            su:lineColor="@color/secondary_green"
+            su:maskHight="32dp"
+            su:noEmpty="true"
+            su:normalTextColor="#999999"
+            su:normalTextSize="14sp"
+            su:selecredTextColor="@color/black"
+            su:selecredTextSize="22sp"
+            su:unitHight="50dp" /> -->
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<EditText 
+    android:id="@+id/act_login_et_mail"
+    android:layout_height="60dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="80dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:drawableRight="@drawable/mail"
+    android:hint="电子邮件"/>
+<EditText 
+    android:id="@+id/act_login_et_password"
+    android:layout_height="60dp"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:drawableRight="@drawable/lock"
+    android:inputType="textPassword"
+    android:hint="密码"/>
+</LinearLayout>

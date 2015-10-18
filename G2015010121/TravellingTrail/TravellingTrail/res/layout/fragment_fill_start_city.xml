@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WizardPageContainer" >
+
+    <TextView style="@style/WizardPageTitle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/frag_fill_start_city_edt_city"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="top|start"
+            android:textSize="20sp"
+            android:saveEnabled="false"
+            android:hint="请输入出发城市" />
+    </LinearLayout>
+
+</LinearLayout>

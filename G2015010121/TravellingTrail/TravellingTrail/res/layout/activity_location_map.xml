@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:orientation="horizontal"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp" >
+        <TextView
+            android:id="@+id/act_location_map_tv_address"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical" />
+        <Button
+            android:id="@+id/act_location_map_btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="确定" />
+    </LinearLayout>
+    
+    <com.amap.api.maps2d.MapView
+	    android:id="@+id/act_trail_map_mapview"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"  
+	    android:clickable="true" />
+
+</LinearLayout>

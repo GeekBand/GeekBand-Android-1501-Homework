@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout 
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        
+    	<com.snail.travellingTrail.common.views.CircleImageView 
+    	    android:layout_height="70dp"
+    	    android:layout_width="70dp"
+    	    android:src="@drawable/ic_default_avatar"
+    	    ></com.snail.travellingTrail.common.views.CircleImageView>
+    	<TextView 
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="V1.0"
+    	    android:layout_marginTop="10dp"/>
+    </LinearLayout>
+    <View 
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#99cc33"/>
+    <LinearLayout 
+        android:layout_height="50dp"
+        android:layout_width="match_parent">
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        	android:gravity="center_vertical"
+            android:text="联系我们"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+    <View 
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#99cc33"/>
+    <LinearLayout 
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        	android:gravity="center_vertical"
+            android:text="法律申明"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <View 
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#99cc33"/>
+	
+</LinearLayout>

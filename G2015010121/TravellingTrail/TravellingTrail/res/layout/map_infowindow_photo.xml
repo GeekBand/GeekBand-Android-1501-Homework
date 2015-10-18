@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="60dp"
+    android:orientation="vertical" >
+    
+    <ImageView
+        android:id="@+id/map_infowindow_photo_iv_img"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:src="@drawable/bg_default_photo"
+        android:scaleType="centerCrop" />
+        
+
+</LinearLayout>

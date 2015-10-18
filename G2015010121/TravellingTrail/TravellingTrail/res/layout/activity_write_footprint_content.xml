@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12sp"
+    android:background="#ffffff" >
+
+    <EditText
+        android:id="@+id/act_write_footprint_content_edt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:hint="写些什么东西吧"
+        android:inputType="textMultiLine"
+        android:gravity="top|left"
+        android:background="@null"
+        android:textSize="16sp"
+        android:padding="8dp" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content" >
+    	
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/act_write_footprint_content_iv"
+            android:layout_alignParentRight="true"
+            android:layout_width="60dp"
+    		android:layout_height="60dp"
+    		android:scaleType="centerCrop"
+        	fresco:placeholderImage="@drawable/ic_add_img"
+    		android:clickable="true" />
+        
+    </RelativeLayout>
+
+</LinearLayout>
