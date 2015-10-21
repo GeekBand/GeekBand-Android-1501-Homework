@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12sp"
+    android:background="#ffffff" >
+
+    <EditText
+        android:id="@+id/act_smenu_minfo_sinature"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="写些什么东西吧"
+        android:inputType="textMultiLine"
+        android:gravity="top|left"
+        android:textSize="16sp"
+        android:padding="8dp" />
+
+</LinearLayout>

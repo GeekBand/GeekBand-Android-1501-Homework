@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/slidingmenu_gray"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|left"
+        android:paddingBottom="25dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="30dp" >
+
+        <com.snail.travellingTrail.common.views.CircleImageView
+            android:id="@+id/act_appinfo_iv_avatar"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:src="@drawable/ic_default_avatar" />
+
+        <TextView
+            android:id="@+id/act_appinfo_tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:hint="请登录"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="#111111" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_marginTop="0.2dp"
+        android:background="#494949" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="15dp" >
+
+            <TextView
+                android:id="@+id/act_appinfo_tv_login"
+                android:layout_width="match_parent"
+            	android:layout_height="50dp"
+                android:gravity="center_vertical|left"
+        		android:paddingLeft="20dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="登录"
+                android:background="@drawable/bg_slidingmenu_item"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_login" />
+            <TextView
+                android:id="@+id/act_appinfo_tv_register"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical|left"
+        		android:paddingLeft="20dp"
+                android:text="注册帐号"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/bg_slidingmenu_item"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_register" />
+
+
+            <TextView
+                android:id="@+id/act_appinfo_tv_revise_informartion"
+                android:layout_width="match_parent"
+            	android:layout_height="50dp"
+                android:gravity="center_vertical|left"
+        		android:paddingLeft="20dp"
+                android:text="资料修改"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/bg_slidingmenu_item"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_information"
+                android:visibility="gone" />
+            
+            <TextView
+                android:id="@+id/act_appinfo_tv_fans"
+                android:layout_width="match_parent"
+            	android:layout_height="50dp"
+                android:gravity="center_vertical|left"
+        		android:paddingLeft="20dp"
+                android:text="我的粉丝"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/bg_slidingmenu_item"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_information"
+                android:visibility="gone" />
+            
+            <TextView
+                android:id="@+id/act_appinfo_tv_follows"
+                android:layout_width="match_parent"
+            	android:layout_height="50dp"
+                android:gravity="center_vertical|left"
+        		android:paddingLeft="20dp"
+                android:text="我的关注"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/bg_slidingmenu_item"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_information"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/act_appinfo_tv_clean"
+                android:layout_width="match_parent"
+            	android:layout_height="50dp"
+                android:gravity="center_vertical|left"
+        		android:paddingLeft="20dp"
+                android:text="清除缓存"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/bg_slidingmenu_item"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_clean" />
+
+            <TextView
+                android:id="@+id/act_appinfo_tv_update"
+                android:layout_width="match_parent"
+            	android:layout_height="50dp" 
+                android:gravity="center_vertical|left"
+        		android:paddingLeft="20dp"
+                android:text="检测更新"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/bg_slidingmenu_item"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_update" />
+
+            <TextView
+                android:id="@+id/act_appinfo_tv_about"
+                android:layout_width="match_parent"
+            	android:layout_height="50dp"
+                android:gravity="center_vertical|left"
+        		android:paddingLeft="20dp"
+                android:text="关于游迹"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/bg_slidingmenu_item"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_about" />
+
+            <TextView
+                android:id="@+id/act_appinfo_tv_logout"
+                android:layout_width="match_parent"
+            	android:layout_height="50dp"
+            	android:visibility="gone" 
+                android:gravity="center_vertical|left"
+        		android:paddingLeft="20dp"
+                android:text="退出登录"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:background="@drawable/bg_slidingmenu_item"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_logout" />
+    </LinearLayout>
+
+</LinearLayout>

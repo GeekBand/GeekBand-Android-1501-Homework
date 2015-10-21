@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="aurantium">#ffa941</color> <!-- 桔黄色 -->
+    <color name="main_green">#50b899</color> <!-- 主调绿色 -->
+    <color name="secondary_green">#4a9d83</color> <!-- 辅色绿色（深绿） -->
+    <color name="secondary_blue">#5170B8</color> <!-- 辅助蓝  -->
+    <color name="creamy_white">#f8f3d1</color> <!-- 米黄色 -->
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="secondary_gray">#555555</color> <!-- 辅助灰  -->
+    <color name="light_gray">#f7f7f7</color>
+    <color name="gray">#cccccc</color>
+    <color name="dark_gray">#aaaaaa</color>
+    <color name="background_gray">#edf1f4</color> <!-- 背景灰  -->
+    <color name="slidingmenu_gray">#2d2d2d</color>
+    <color name="slidingmenu_dark_gray">#282828</color>
+    
+    
+    <color name="step_pager_previous_tab_color">#4433b5e5</color>
+    <color name="step_pager_selected_tab_color">#ff0099cc</color>
+    <color name="step_pager_selected_last_tab_color">#ff669900</color>
+    <color name="step_pager_next_tab_color">#10000000</color>
+
+    <color name="review_green">#ff669900</color>
+
+    <color name="text_light">#66000000</color>
+</resources>

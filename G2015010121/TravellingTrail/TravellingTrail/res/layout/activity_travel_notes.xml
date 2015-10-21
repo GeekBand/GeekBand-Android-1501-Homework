@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/act_travel_notes_llyt_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                    <ImageView
+                        android:id="@+id/act_travel_notes_iv_map "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bg_loading" />
+
+                    <ImageView
+                        android:id="@+id/act_travel_notes_iv_press "
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#55000000"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_press" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="86dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp" >
+
+                    <ImageView
+                        android:id="@+id/act_travel_notes_iv_avatar"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/img_default_avatar" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp" >
+
+                        <TextView
+                            android:id="@+id/act_travel_notes_tv_nickname"
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/act_travel_notes_tv_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="34dp"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/act_travel_notes_tv_time_interval"
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/act_travel_notes_tv_introduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/creamy_white"
+                    android:padding="8dp" />
+            </LinearLayout>
+
+            <com.jankey.NoScrollingListView
+                android:id="@+id/act_travel_notes_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/act_travel_notes_llyt_top"
+                android:layout_marginBottom="40dp"
+                android:background="#f3f3f3"
+                android:divider="@null"
+                android:dividerHeight="0dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/act_travel_notes_llyt_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_green" >
+
+        <LinearLayout
+            android:id="@+id/act_travel_notes_llyt_time_line_btn"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/btn_buttom_bar"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:gravity="center"
+                android:src="@drawable/ic_time_btn" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/act_travel_notes_llyt_like"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/act_travel_notes_llyt_comment"
+            android:background="@drawable/btn_buttom_bar"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:gravity="center"
+                android:src="@drawable/ic_like_normal" />
+
+            <TextView
+                android:id="@+id/act_travel_notes_tv_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="-2dp"
+                android:textColor="@color/creamy_white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/act_travel_notes_llyt_comment"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_buttom_bar"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:src="@drawable/ic_comment_normal" />
+
+            <TextView
+                android:id="@+id/act_travel_notes_tv_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="-2dp"
+                android:textColor="@color/creamy_white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

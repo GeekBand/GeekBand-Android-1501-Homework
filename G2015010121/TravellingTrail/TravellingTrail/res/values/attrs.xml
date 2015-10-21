@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <!-- ////////////////////   ScrollerNumberPicker   /////////////////////// -->
+    <declare-styleable name="NumberPicker">
+        <attr name="normalTextColor" format="color" />
+        <attr name="normalTextSize" format="dimension" />
+        <attr name="selecredTextColor" format="color" />
+        <attr name="selecredTextSize" format="dimension" />
+        <attr name="unitHight" format="dimension" />
+        <attr name="itemNumber" format="integer" />
+        <attr name="lineColor" format="color" />
+        <attr name="maskHight" format="dimension" />
+        <attr name="noEmpty" format="boolean" />
+        <attr name="isEnable" format="boolean" />
+    </declare-styleable>
+    <!-- ////////////////////   ScrollerNumberPicker   /////////////////////// -->
+
+    
+    <!-- ///////////////////////   ZrcListView    ///////////////////////////// -->
+    <declare-styleable name="ZrcAbsListView">
+        <attr name="android:listSelector" />
+        <attr name="android:drawSelectorOnTop" />
+        <attr name="android:stackFromBottom" />
+        <attr name="android:scrollingCache" />
+        <attr name="android:transcriptMode" />
+        <attr name="android:cacheColorHint" />
+        <attr name="android:smoothScrollbar" />
+        <attr name="android:choiceMode" />
+    </declare-styleable>
+    <declare-styleable name="ListView">
+        <attr name="android:entries" />
+        <attr name="android:divider" />
+        <attr name="android:dividerHeight" />
+        <attr name="android:headerDividersEnabled" />
+        <attr name="android:footerDividersEnabled" />
+        <attr name="android:overScrollHeader" />
+        <attr name="android:overScrollFooter" />
+    </declare-styleable>
+    <!-- ///////////////////////   ZrcListView    ///////////////////////////// -->
+
+
+    <!-- ///////////////////////   fresco    ///////////////////////////// -->
+<!--     <declare-styleable name="GenericDraweeView">
+
+        Fade duration in milliseconds.
+        <attr name="fadeDuration" format="integer" />
+
+        Images - Scale types must match values in ScaleType.fromString (ScalingUtils.java).
+    		For drawables that should not be scaled, such as those with the android:tileMode
+    		attribute set, use the value 'none'.
+
+        A drawable or color to be be used as a placeholder.
+        <attr name="placeholderImage" format="reference" />
+        Scale type of the placeholder image. Ignored if placeholderImage is not specified.
+        <attr name="placeholderImageScaleType" format="string" />
+
+        A drawable to be be used as a retry image.
+        <attr name="retryImage" format="reference" />
+        Scale type of the retry image. Ignored if retryImage is not specified.
+        <attr name="retryImageScaleType" format="string" />
+
+        A drawable to be be used as a failure image.
+        <attr name="failureImage" format="reference" />
+        Scale type of the failure image. Ignored if failureImage is not specified.
+        <attr name="failureImageScaleType" format="string" />
+
+        A drawable to be be used as a progress bar.
+        <attr name="progressBarImage" format="reference" />
+        Scale type of the progress bar. Ignored if progressBarImage is not specified.
+        <attr name="progressBarImageScaleType" format="string" />
+        Progress bar Auto Rotate interval in milliseconds
+        <attr name="progressBarAutoRotateInterval" format="integer" />
+
+        Scale type of the actual image.
+        <attr name="actualImageScaleType" format="string" />
+
+        A drawable or color to be used as a background.
+        <attr name="backgroundImage" format="reference" />
+
+        A drawable or color to be used as an overlay.
+        <attr name="overlayImage" format="reference" />
+
+        A drawable or color to be used as a pressed-state-overlay
+        <attr name="pressedStateOverlayImage" format="reference" />
+
+        Rounding params - Declares attributes for rounding shape, mode and border.
+
+
+        Round as circle.
+        <attr name="roundAsCircle" format="boolean" />
+        Rounded corner radius. Ignored if roundAsCircle is used.
+        <attr name="roundedCornerRadius" format="dimension" />
+        Round the top-left corner. Ignored if roundAsCircle is used.
+        <attr name="roundTopLeft" format="boolean" />
+        Round the top-right corner. Ignored if roundAsCircle is used.
+        <attr name="roundTopRight" format="boolean" />
+        Round the bottom-right corner. Ignored if roundAsCircle is used.
+        <attr name="roundBottomRight" format="boolean" />
+        Round the bottom-left corner. Ignored if roundAsCircle is used.
+        <attr name="roundBottomLeft" format="boolean" />
+        Round by overlying color.
+        <attr name="roundWithOverlayColor" format="color" />
+        Rounding border width
+        <attr name="roundingBorderWidth" format="dimension" />
+        Rounding border color
+        <attr name="roundingBorderColor" format="color" />
+    </declare-styleable> -->
+    <!-- ///////////////////////   fresco    ///////////////////////////// -->
+
+</resources>

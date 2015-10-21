@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/listitem_square_lly"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/share_corners"
+    android:orientation="vertical">
+    <RelativeLayout 
+	    android:id="@+id/listitem_square_rlly"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="3dp" >
+		<!-- <ImageView 
+		    android:id="@+id/listitem_square_iv_tripimage"
+		    android:layout_height="wrap_content"
+        	android:layout_width="match_parent"
+        	android:scaleType="centerCrop"
+        	android:src="@drawable/jia"
+        	android:clickable="true"
+    		android:background="@drawable/share_corners"/> -->
+    		
+    	<com.facebook.drawee.view.SimpleDraweeView
+		    android:id="@+id/listitem_square_iv_tripimage"
+		    android:layout_height="wrap_content"
+        	android:layout_width="match_parent"
+        	android:scaleType="centerCrop"
+        	fresco:placeholderImage="@drawable/bg_default_photo"
+        	android:clickable="true"
+    		android:background="@drawable/share_corners"/>
+        <TextView
+            android:id="@+id/listitem_square_tv_cities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="广州-东莞-惠州"
+            android:background="@color/secondary_gray"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/listitem_square_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/listitem_square_tv_cities"
+            android:text="10天"
+            android:background="@color/secondary_gray"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/listitem_square_cb_good"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="8dp"
+            android:textSize="16sp"
+            android:layout_toLeftOf="@+id/listitem_square_cb_comment"
+            android:button="@drawable/ic_square_like"
+            android:textColor="#ffffff" />
+
+        <CheckBox
+            android:id="@+id/listitem_square_cb_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="8dp"
+            android:textSize="16sp"
+            android:button="@drawable/ic_square_comment_normal"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/listitem_square_llyt2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="3dp" >
+
+        <com.snail.travellingTrail.common.views.CircleImageView
+            android:id="@+id/listitem_square_iv_avatar"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/ic_default_avatar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/listitem_square_tv_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:layout_marginBottom="-2dp"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxEms="16"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/listitem_square_tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

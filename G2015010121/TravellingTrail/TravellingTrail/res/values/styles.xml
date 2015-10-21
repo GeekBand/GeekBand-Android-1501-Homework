@@ -1,0 +1,100 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    
+    <!-- 主菜单选项卡Tab的单选按钮样式 -->
+    <style name="TabRadioButton" >
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/main_green</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textColor">@drawable/color_tab_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    
+    <!-- ActionBar样式修改——重新指向新的演示 -->
+    <style name="Themes.Actionbar" parent="@style/Theme.Sherlock.Light">
+        <item name="actionBarStyle">@style/Widget.Slider.ActionBar</item>
+        <item name="android:actionBarStyle">@style/Widget.Slider.ActionBar</item>
+    </style>
+
+    <!-- ActionBar主体样式 -->
+    <style name="Widget.Slider.ActionBar" parent="@style/Widget.Sherlock.ActionBar">
+        <item name="titleTextStyle">@style/TextAppearance.Slider.Widget.ActionBar.Titlen</item>
+        <item name="android:titleTextStyle">@style/TextAppearance.Slider.Widget.ActionBar.Titlen</item>
+        <item name="background">@color/main_green</item>
+        <item name="android:background">@color/main_green</item>
+    </style>
+    
+    <!-- ActionBar标题字体 -->
+    <style name="TextAppearance.Slider.Widget.ActionBar.Titlen" parent="@style/TextAppearance.Sherlock.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    
+    <!-- 主界面Tab new（“+”号）的弹出窗动画 -->
+    <style name="PopupAnimation" parent="android:Animation" mce_bogus="1">          
+        <item name="android:windowEnterAnimation">@anim/anim_tab_popup_in</item>     
+        <item name="android:windowExitAnimation">@anim/anim_tab_popup_out</item>     
+    </style>
+    <style name="pop_anim_style" parent="android:Animation" mce_bogus="1">          
+        <item name="android:windowEnterAnimation">@anim/useredit_popup_out</item>     
+        <item name="android:windowExitAnimation">@anim/useredit_popup_enter</item>
+    </style>
+    
+    
+    
+    
+    <style name="WizardPageContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/background_gray</item>
+    </style>
+
+    <style name="WizardPageTitle">
+        <item name="android:id">@android:id/title</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:paddingLeft">?android:attr/listPreferredItemPaddingLeft</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">#ff0099cc</item>
+    </style>
+
+    <style name="WizardFormLabel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+        <item name="android:textColor">@color/text_light</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+    </style>
+    
+    
+</resources>

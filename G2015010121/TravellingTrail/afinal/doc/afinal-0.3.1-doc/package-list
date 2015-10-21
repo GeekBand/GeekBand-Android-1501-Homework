@@ -1,0 +1,13 @@
+net.tsz.afinal
+net.tsz.afinal.annotation.sqlite
+net.tsz.afinal.annotation.view
+net.tsz.afinal.bitmap.core
+net.tsz.afinal.bitmap.display
+net.tsz.afinal.bitmap.download
+net.tsz.afinal.common
+net.tsz.afinal.db.sqlite
+net.tsz.afinal.db.table
+net.tsz.afinal.exception
+net.tsz.afinal.http
+net.tsz.afinal.http.entityhandler
+net.tsz.afinal.reflect

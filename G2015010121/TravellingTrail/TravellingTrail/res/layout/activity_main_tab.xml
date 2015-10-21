@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray" >
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/act_main_tab_viewpager_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="54dp" />
+
+    <RadioGroup
+        android:id="@+id/act_main_tab_rgrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/act_main_tab_rbtn_square"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/btn_tab_square"
+            android:text="广    场"
+            android:checked="true"
+            style="@style/TabRadioButton" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+            
+            <!-- 此RadioButton不能选中，此控件作用为给第二栏填充背景色，并让背景色区域高度与第一三栏（选项卡）相同 -->
+            <RadioButton 
+                android:layout_width="match_parent"
+	            android:enabled="false"
+	            android:drawableTop="@drawable/btn_tab_square"
+	            android:layout_gravity="center_horizontal|bottom"
+            	style="@style/TabRadioButton" />
+            
+            <LinearLayout
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/ic_shape_tab_new"
+                android:orientation="vertical"
+                android:gravity="center"
+               	android:layout_gravity="center_horizontal|bottom" >
+                
+	            <CheckBox
+	                android:id="@+id/act_main_tab_btn_new"
+	                android:layout_width="45dp"
+	                android:layout_height="45dp"
+	                android:button="@null"
+	                android:background="@drawable/ic_tab_new"
+	               	android:layout_gravity="center" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <RadioButton
+            android:id="@+id/act_main_tab_rbtn_mine"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/btn_tab_mine"
+            android:text="我    的"
+            style="@style/TabRadioButton" />
+    </RadioGroup>
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_submit_comment"
+        android:title="发送评论"
+        android:icon="@drawable/ic_submit"
+        android:showAsAction="always"/>
+
+</menu>

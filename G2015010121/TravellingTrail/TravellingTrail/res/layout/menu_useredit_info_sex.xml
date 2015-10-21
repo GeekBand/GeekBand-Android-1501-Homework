@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@color/background_gray">
+    <TextView 
+        android:id="@+id/menu_useredit_info_sex_man"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="男"
+    	android:background="#e0ffffff"/>
+    <TextView 
+        android:id="@+id/menu_useredit_info_sex_women"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="女"
+    	android:background="#e0ffffff"/>
+    <TextView 
+        android:id="@+id/menu_useredit_info_sex_cancel"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="取消"
+    	android:background="#e0ffffff"/>
+
+</LinearLayout>

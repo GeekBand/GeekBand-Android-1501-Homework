@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">游迹</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="zoom_title">zoom title</string>
+	
+	
+	
+	
+	<string name="next">下一步</string>
+    <string name="prev">上一步</string>
+    <string name="finish">创建旅程</string>
+    <string name="review">确认信息</string>
+
+
+    <string name="submit_confirm_message">亲，确定创建旅程吗？</string>
+    <string name="submit_confirm_button">当然啦</string>
+    
+    <item type="id" name="tag_boolean"></item>
+    <item type="id" name="tag_touch_where"></item>
+    
+    
+    <string name="error_network">搜索失败,请检查网络连接！</string>
+    <string name="error_key">key验证无效！</string>
+    <string name="error_other">未知错误，请稍后重试!错误码为</string>
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+</resources>

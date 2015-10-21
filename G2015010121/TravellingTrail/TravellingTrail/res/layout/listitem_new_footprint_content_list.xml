@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+    <ImageView
+        android:id="@+id/listitem_new_footprint_content_list_iv_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:clickable="true"
+        android:src="@drawable/ic_square_default_img" />
+	<TextView
+        android:id="@+id/listitem_image_manager_tv_name"
+	    android:layout_toRightOf="@+id/listitem_new_footprint_content_list_iv_image"
+	    android:layout_toLeftOf="@+id/listitem_new_footprint_content_list_iv_remove"
+	    android:layout_height="60dp"
+	    android:layout_width="0dp"
+	    android:paddingLeft="10dp"
+        android:layout_centerVertical="true"
+	    android:textSize="16sp"
+	    android:textColor="#000000"
+        android:clickable="true"
+        android:gravity="center_vertical" />
+	<ImageView
+        android:id="@+id/listitem_new_footprint_content_list_iv_remove"
+	    android:layout_width="60dp"
+	    android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_remove"
+        android:clickable="true"
+        android:scaleType="centerInside" />
+</RelativeLayout>

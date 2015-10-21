@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.snail.travellingTrail"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.launcher.permission.READ_SETTINGS" />
+
+    <application
+        android:name="com.snail.travellingTrail.common.TravellingTrailApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Themes.Actionbar" >
+        
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="e2d1d2d997052a9d710d8107bb1fc7a2" />
+
+        <activity
+            android:name="com.snail.travellingTrail.main.controller.MainTabActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.snail.travellingTrail.trailMap.controller.TrailMapActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.snail.travellingTrail.travelNotes.controller.TravelNotesActivity"
+            android:label="旅程日志" >
+        </activity>
+        <activity
+            android:name="com.snail.travellingTrail.travelNotes.controller.TravelCommentActivity"
+            android:label="旅程评论" >
+        </activity>
+        <activity
+            android:name="com.snail.travellingTrail.travelNotes.controller.WriteTravelCommentActivity"
+            android:label="发表旅程评论" >
+        </activity>
+        <activity android:name="com.snail.travellingTrail.slidingmenu.controller.SetAppInfoFaceAnimation" >
+        </activity>
+        <activity android:name="com.snail.travellingTrail.slidingmenu.controller.LoginActivity" >
+        </activity>
+        <activity android:name="com.snail.travellingTrail.slidingmenu.controller.RegisterActivity" >
+        </activity>
+        <activity
+            android:name="com.snail.travellingTrail.trailMap.controller.SingleFootprintActivity"
+            android:label="图文心情" >
+        </activity>
+        <activity
+            android:name="com.snail.travellingTrail.user.controller.MyPageActivity"
+            android:label="图文心情" >
+        </activity>
+        <activity
+            android:name="com.snail.travellingTrail.trailMap.controller.CommentActivity"
+            android:label="评论列表" >
+        </activity>
+        <activity
+            android:name="com.snail.travellingTrail.trailMap.controller.WriteCommentActivity"
+            android:label="写评论" >
+        </activity>
+        <activity android:name="com.snail.travellingTrail.slidingmenu.controller.AboutActivity"
+            android:label="关于" >
+        </activity>
+        <activity android:name="com.snail.travellingTrail.newTravel.controller.CreateNewTravelActivity"
+            android:label="创建旅程" >
+        </activity>
+        <activity android:name="com.snail.travellingTrail.newTravel.controller.LocationMapActivity"
+            android:label="定位发表图文" >
+        </activity>
+        <activity android:name="com.snail.travellingTrail.newTravel.controller.NewFootprintContentListActivity"
+            android:label="添加图文" >
+        </activity>
+        <activity android:name="com.snail.travellingTrail.newTravel.controller.WriteFootprintContentActivity"
+            android:label="填写图文内容" >
+        </activity>
+        <activity
+            android:name="com.snail.travellingTrail.newTravel.controller.BigImageActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity android:name="com.snail.travellingTrail.slidingmenu.controller.UserInfoEditActivity" >
+        </activity>
+        <activity android:name="com.snail.travellingTrail.slidingmenu.controller.EditSinatureOrNickName" >
+        </activity>
+        <activity android:name="com.snail.travellingTrail.slidingmenu.controller.UploadImageActivity" >
+        </activity>
+        <activity android:name="com.snail.travellingTrail.slidingmenu.controller.UploadImage" >
+        </activity>
+        <activity android:name="com.snail.travellingTrail.socialIntercourse.controller.FansListActivity"
+            android:label="我的粉丝" >
+        </activity>
+        <activity android:name="com.snail.travellingTrail.socialIntercourse.controller.FollowsListActivity"
+            android:label="我的关注" >
+        </activity>
+        <activity android:name="com.snail.travellingTrail.finishTravel.controller.FinishTravelActivity"
+            android:label="结束旅程" >
+        </activity>
+    </application>
+
+</manifest>
