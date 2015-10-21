@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView android:text="QUANTITY" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/quantity"
+        android:textSize="28sp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/button_jian"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/quantity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="0"
+        android:id="@+id/number"
+        android:layout_alignTop="@+id/button_jian"
+        android:layout_toRightOf="@+id/button_jian"
+        android:textSize="28sp"
+        android:gravity="center"
+         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/button_jia"
+        android:layout_alignTop="@+id/button_jian"
+        android:layout_toRightOf="@+id/number"
+         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="每个10美元 总价："
+        android:layout_below="@id/button_jian"
+        android:layout_marginTop="20dp"
+        android:id="@+id/price"
+        android:textSize="28sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/money"
+        android:text="$0"
+        android:layout_below="@id/price"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:textSize="28sp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_order"
+        android:text="Order"
+        android:layout_below="@id/money"
+        android:layout_marginTop="20dp"/>
+</RelativeLayout>
