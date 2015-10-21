@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Q6.MakePhoneCall</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="hint">Input phone number here</string>
+    <string name="button_text">Make the call!</string>
+</resources>

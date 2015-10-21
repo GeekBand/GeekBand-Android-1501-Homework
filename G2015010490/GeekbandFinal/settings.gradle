@@ -1,0 +1,1 @@
+include ':app', ':q2.orderui', ':q3.pointcounter', ':q4.dynamiclistview', ':q5.startactivity', ':q6.makephonecall', ':q7.sqlimplement', ':q8.1sockerserver'
