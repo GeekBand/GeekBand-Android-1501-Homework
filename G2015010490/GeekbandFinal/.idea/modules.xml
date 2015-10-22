@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GeekbandFinal.iml" filepath="$PROJECT_DIR$/GeekbandFinal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/q2.orderui/q2.orderui.iml" filepath="$PROJECT_DIR$/q2.orderui/q2.orderui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/q3.pointcounter/q3.pointcounter.iml" filepath="$PROJECT_DIR$/q3.pointcounter/q3.pointcounter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/q4.dynamiclistview/q4.dynamiclistview.iml" filepath="$PROJECT_DIR$/q4.dynamiclistview/q4.dynamiclistview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/q5.startactivity/q5.startactivity.iml" filepath="$PROJECT_DIR$/q5.startactivity/q5.startactivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/q6.makephonecall/q6.makephonecall.iml" filepath="$PROJECT_DIR$/q6.makephonecall/q6.makephonecall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/q7.sqlimplement/q7.sqlimplement.iml" filepath="$PROJECT_DIR$/q7.sqlimplement/q7.sqlimplement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/q8.1sockerserver/q8.1sockerserver.iml" filepath="$PROJECT_DIR$/q8.1sockerserver/q8.1sockerserver.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Start Another Activity</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="button_text">Start another activity</string>
+    <string name="show_text">This is another activity</string>
+</resources>
